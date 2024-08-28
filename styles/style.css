@@ -35,148 +35,136 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-
+    font-size: 22px;
+    font-family: var(--font-primaria);
 }
 
-body{
-    box-sizing: border-box;
-    width: 80%;
-    margin: auto;
-    color: var(--cor-secundaria);
-    font-family: var(--font-primaria);
+body, html{
+    width: 100%;
     background-image: linear-gradient(to top, #161515, #000000);
+    color: white;
 }
 
-header nav{
+nav{
     display: flex;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
+    justify-content: space-between;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 1px solid red;
 }
 
-header a{
-    font-family: var(--font-primaria);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
+nav .menu, nav .logo{
+    margin: auto 0;
+}
+
+nav .menu a{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+nav .menu a:hover{
+    color: rgba(255, 0, 0, 0.5);
+    font-weight: bold;
 }
 
 main{
-    padding: 5%;
-    margin: auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
-article{
+.apresentacao{
+    margin: 15px 0;
     text-align: center;
 }
 
-h1{
-    font-size: 2em;
-    padding-bottom: 1em;
-}
-
-p{
-    font-family: var(--font-primaria);
-    font-size: 1em;
-    text-align: justify;
-    margin: 0 3em 0 3em;
-    text-indent: 10%;
-    padding-bottom: 1em;
-}
-
-.minhas-redes{
-    padding: 3em 0 1em 0;
-}
-
-.minhas-redes-navegacao{
-    display: flex;
-    justify-content: center;
-    border: 3px outset var(--cor-terciaria);
-    width: 50%;
-    text-align: center;
-    border-radius: 16px;
+h1, h2{
     font-size: 1.3em;
-    font-weight: 600;
-    padding: 1em 0;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    margin: auto;
+    margin: 10px 0;
 }
 
-.minhas-redes-navegacao:hover, .tecnologias-logo:hover{
-    background-color: var(--cor-hover);
+.apresentacao-sobre img{
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 50%;
 }
 
 strong{
     color: var(--cor-terciaria);
-    font-size: 1.1em;
+}
+
+.apresentacao-sobre p:nth-of-type(1){
+    margin: 10px auto;
+    width: 75%;
+    line-height: 1.1em;
+}
+
+.apresentacao-sobre p:nth-of-type(2){
+    text-align: justify;
+    padding: 0 2%;
+    margin: 50px 0;
+}
+
+.minhas-redes{
+    margin-bottom: 55px;
+}
+
+.minhas-redes img{
+    width: 40px;
+}
+
+.minhas-redes a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
 }
 
 .tecnologias{
-    padding: 5em 0 7em 0;
+    margin-bottom: 100px;
 }
 
-.tecnologias-logo{
-    border: 2px dashed var(--cor-terciaria);
-    border-radius: 10px;
-}
-
-.foto-perfil{
-    border-radius: 50%;
-    width: 30%;
-    padding-bottom: 2em;
-}
-
-.apresentacao-gostos-pessoais{
-    padding-bottom: 5em;
+.tecnologias img{
+    width: 70px;
 }
 
 .apresentacao-gostos-pessoais p, .apresentacao-motivacoes p{
-    border: 1px solid var(--cor-terciaria);
-    padding: 1em;
+    margin: 50px 2%;
+    text-align: justify;
+    border: 1px solid red;
+    padding: 2%;
 }
 
 footer{
-    background-color: #e53939;
-}
-
-footer p{
     text-align: center;
-    padding: 1em;
+    padding: 30px;
 }
 
-@media (max-width: 730px) {
-      
-    header nav{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 150px;
+@media screen and (max-width: 885px) {
+    nav{
+        display: block;
+        height: auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    nav .menu a{
+        display: none;
     }
 
-    header nav img{
-        width: 20%;
+    .minhas-redes a{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
     }
-    
-    header a{
-        font-family: var(--font-primaria);
-        font-size: 100%;
-        font-weight: 600;
-        color: var(--cor-terciaria);
 
+    .apresentacao-sobre p:nth-of-type(1){
+        width: 90%;
     }
-  }
 
-  @media (max-width: 636px) {
-    header a{
-        font-family: var(--font-primaria);
-        font-size: 80%;
-        font-weight: 600;
-        color: var(--cor-terciaria);
-        margin: -1.8em;
-        padding-right: 1em;
-
+    .apresentacao-gostos-pessoais p, .apresentacao-motivacoes p{
+        text-align: left;
     }
-  }
+}
